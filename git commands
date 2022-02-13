@@ -8,6 +8,7 @@ git pull nombredelremote nombredelbranch
 git pull origin master
 #empujar cambios
 git push
+git push origin nombredelbranch
 
 #listar branches
 git branch -v
