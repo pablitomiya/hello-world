@@ -1,3 +1,13 @@
+# status
+
+git status
+git log
+#actualizar repo
+git pull
+
+#empujar cambios
+git push
+
 
 #crear branch
 git checkout -b nombredelbranch
