@@ -22,3 +22,9 @@ git checkout nombredelbranch
 #pushear al branch
 
 git push origin nombredelbranch
+
+#fusionar ramas
+#primero entrar a la rama a fusionar
+git checkout nombredelbranch
+#luego fusionar con la otra rama, en este caso master
+git merge master
