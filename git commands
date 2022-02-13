@@ -28,3 +28,7 @@ git push origin nombredelbranch
 git checkout nombredelbranch
 #luego fusionar con la otra rama, en este caso master
 git merge master
+
+
+#borrar branch
+git branch -D [nombredelbranch]
