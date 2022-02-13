@@ -9,6 +9,8 @@ git pull origin master
 #empujar cambios
 git push
 
+#listar branches
+git branch -v
 
 #crear branch
 git checkout -b nombredelbranch
