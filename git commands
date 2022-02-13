@@ -1,0 +1,7 @@
+
+#crear branch
+git checkout -b nombredelbranch
+
+#pushear al branch
+
+git push origin nombredelbranch
