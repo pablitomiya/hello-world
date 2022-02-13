@@ -13,6 +13,9 @@ git push
 #crear branch
 git checkout -b nombredelbranch
 
+#cambiar de branch
+git checkout nombredelbranch
+
 #pushear al branch
 
 git push origin nombredelbranch
