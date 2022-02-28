@@ -11,14 +11,14 @@ const path = require('path')
 module.exports = function(dir, ext, callback){
     fs.readdir(dir, (err, list)=>{
         if (err){
-            callback(err)
+            return callback(err)
         }
         const filteredList = list.filter((file)=> {
             if (path.extname(file) == `.${ext}`){
-                return file
+                return callback (file)
             }
-        console.log(filteredList)
-            // return filteredList
+        // console.log(filteredList)
+        //return callback (filteredList)
         })
     })
 }
