@@ -41,7 +41,7 @@
       "guid": "efb50bff-b5ea-463d-94ad-cf4a73e35f1d",
       "isActive": true,
       "balance": "$2,893.55",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://place-hold.it/32x32",
       "age": 28,
       "eyeColor": "green",
       "name": "Alford Bates",
@@ -86,7 +86,7 @@
       "guid": "9f9ceebc-ebf7-4453-89c3-18336a846843",
       "isActive": false,
       "balance": "$2,689.67",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://place-hold.it/32x32",
       "age": 28,
       "eyeColor": "green",
       "name": "Cameron Nixon",
@@ -131,7 +131,7 @@
       "guid": "243c18ae-98ee-4cf7-8971-5e7dd990d69b",
       "isActive": false,
       "balance": "$1,521.18",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://place-hold.it/32x32",
       "age": 24,
       "eyeColor": "brown",
       "name": "Brennan Meyer",
@@ -176,7 +176,7 @@
       "guid": "b7a49e01-d0f7-4884-9e3e-4179d6f8258b",
       "isActive": true,
       "balance": "$3,930.33",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://place-hold.it/32x32",
       "age": 28,
       "eyeColor": "blue",
       "name": "Emma Mclean",
@@ -221,7 +221,7 @@
       "guid": "f2e2623c-5eb0-4af9-8ffa-b1120880a343",
       "isActive": true,
       "balance": "$1,658.32",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://place-hold.it/32x32",
       "age": 24,
       "eyeColor": "green",
       "name": "Deana Mcclain",
@@ -266,7 +266,7 @@
       "guid": "abd17b77-1a47-4f31-baaa-48d4f8442da0",
       "isActive": true,
       "balance": "$3,550.33",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://place-hold.it/32x32",
       "age": 31,
       "eyeColor": "green",
       "name": "Beck Kirby",
@@ -306,23 +306,26 @@
       "favoriteFruit": "banana"
     }
   ]
-const parent = document.querySelector('ul')
-const li = document.createElement("li")
-li.className = "list-group-item"
-const img = document.createElement("img", {src: "", alt: "lala"})
-const h2 = document.createElement("h2")
-const newContenth2 = document.createTextNode("Don Draper");
-h2.appendChild(newContenth2)
-const p = document.createElement("p")
-const newContentp = document.createTextNode("Copy writter Advertising");
-p.appendChild(newContentp)
-const p2 = document.createElement("p")
-const newContentp2 =  document.createTextNode("Available");
-p2.appendChild(newContentp2)
+users.forEach((objUser) => {
+  // console.log(objUser)
+  const parent = document.querySelector('ul')
+  const li = document.createElement("li")
+  li.className = "list-group-item"
+  const img = document.createElement("img")
+  img.src = objUser.picture
+  img.alt = "objUser.name"
+  const h2 = document.createElement("h2")
+  h2.appendChild(document.createTextNode(objUser.name))
+  const p = document.createElement("p")
+  p.appendChild(document.createTextNode(objUser.about))
+  const p2 = document.createElement("p")
+  p2.appendChild(document.createTextNode(objUser.email))
+  const hr = document.createElement("hr")
+  li.append(img,h2,p,p2,hr)
+  parent.appendChild(li)
+});
 
-const hr = document.createElement("hr")
-li.append(img,h2,p,p2,hr)
-parent.appendChild(li)
+
 
 </script>    
 </body>
