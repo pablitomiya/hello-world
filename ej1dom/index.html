@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">
+                BANDWITH
+            </span> 
+            <div class="nav-item d-flex">
+                
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <section>
+            <ul class="list-group list-group-horizontal-xxl">
+                <!-- <li class="list-group-item">
+                    <img src="" alt="">
+                    <h2>Don Draper</h2>
+                    <p>Copy writter Advertising</p>
+                    <p>Available</p>
+                    <hr>
+                </li>                -->
+            </ul>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script>
+    const users = [
+    {
+      "_id": "621e8e180ed5c15673e77b97",
+      "index": 0,
+      "guid": "efb50bff-b5ea-463d-94ad-cf4a73e35f1d",
+      "isActive": true,
+      "balance": "$2,893.55",
+      "picture": "http://placehold.it/32x32",
+      "age": 28,
+      "eyeColor": "green",
+      "name": "Alford Bates",
+      "gender": "male",
+      "company": "ORBIFLEX",
+      "email": "alfordbates@orbiflex.com",
+      "phone": "+1 (959) 486-3614",
+      "address": "425 Ferris Street, Craig, New Jersey, 6529",
+      "about": "Cupidatat velit nisi cillum magna incididunt nisi enim eu. Lorem exercitation cillum et do eu laborum veniam excepteur pariatur proident amet. Ipsum ex sit eiusmod nisi culpa quis ut excepteur.\r\n",
+      "registered": "2014-03-17T08:44:11 +03:00",
+      "latitude": -66.299201,
+      "longitude": 137.846265,
+      "tags": [
+        "sunt",
+        "quis",
+        "aliquip",
+        "Lorem",
+        "occaecat",
+        "ex",
+        "ex"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Bryant Craft"
+        },
+        {
+          "id": 1,
+          "name": "Leonor Hunter"
+        },
+        {
+          "id": 2,
+          "name": "Lourdes Porter"
+        }
+      ],
+      "greeting": "Hello, Alford Bates! You have 9 unread messages.",
+      "favoriteFruit": "banana"
+    },
+    {
+      "_id": "621e8e18cda98be97bfb99e4",
+      "index": 1,
+      "guid": "9f9ceebc-ebf7-4453-89c3-18336a846843",
+      "isActive": false,
+      "balance": "$2,689.67",
+      "picture": "http://placehold.it/32x32",
+      "age": 28,
+      "eyeColor": "green",
+      "name": "Cameron Nixon",
+      "gender": "male",
+      "company": "QUIZKA",
+      "email": "cameronnixon@quizka.com",
+      "phone": "+1 (914) 571-3784",
+      "address": "517 Madoc Avenue, Delshire, Wyoming, 2986",
+      "about": "Aute voluptate nisi enim aliquip incididunt aliqua. Pariatur adipisicing velit dolor elit proident fugiat ipsum laborum ipsum ipsum amet. Officia elit voluptate nostrud commodo sint esse est magna esse incididunt nisi id.\r\n",
+      "registered": "2017-09-17T09:54:35 +03:00",
+      "latitude": 77.320059,
+      "longitude": -117.502355,
+      "tags": [
+        "tempor",
+        "sint",
+        "reprehenderit",
+        "ullamco",
+        "nulla",
+        "minim",
+        "occaecat"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Richards Rush"
+        },
+        {
+          "id": 1,
+          "name": "Sheena Sosa"
+        },
+        {
+          "id": 2,
+          "name": "Buckley Booth"
+        }
+      ],
+      "greeting": "Hello, Cameron Nixon! You have 8 unread messages.",
+      "favoriteFruit": "strawberry"
+    },
+    {
+      "_id": "621e8e187b3682687051c3ff",
+      "index": 2,
+      "guid": "243c18ae-98ee-4cf7-8971-5e7dd990d69b",
+      "isActive": false,
+      "balance": "$1,521.18",
+      "picture": "http://placehold.it/32x32",
+      "age": 24,
+      "eyeColor": "brown",
+      "name": "Brennan Meyer",
+      "gender": "male",
+      "company": "BICOL",
+      "email": "brennanmeyer@bicol.com",
+      "phone": "+1 (976) 467-3545",
+      "address": "319 Georgia Avenue, Marenisco, California, 5852",
+      "about": "Reprehenderit proident nulla eiusmod aute irure Lorem. Consectetur velit ad et veniam est occaecat non id deserunt veniam nostrud exercitation velit. Eu adipisicing sunt irure id commodo sunt culpa officia cupidatat nisi. Amet elit exercitation ipsum consequat nostrud pariatur ea. Ad magna nisi ex labore ullamco non. Eu esse veniam culpa cillum commodo laboris consequat occaecat officia culpa.\r\n",
+      "registered": "2014-01-31T08:22:44 +03:00",
+      "latitude": 80.450194,
+      "longitude": -116.635587,
+      "tags": [
+        "consectetur",
+        "dolor",
+        "do",
+        "sunt",
+        "enim",
+        "consectetur",
+        "excepteur"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Lucinda Reid"
+        },
+        {
+          "id": 1,
+          "name": "Duffy Schultz"
+        },
+        {
+          "id": 2,
+          "name": "Battle Washington"
+        }
+      ],
+      "greeting": "Hello, Brennan Meyer! You have 1 unread messages.",
+      "favoriteFruit": "banana"
+    },
+    {
+      "_id": "621e8e18adbb36b8991c16e3",
+      "index": 3,
+      "guid": "b7a49e01-d0f7-4884-9e3e-4179d6f8258b",
+      "isActive": true,
+      "balance": "$3,930.33",
+      "picture": "http://placehold.it/32x32",
+      "age": 28,
+      "eyeColor": "blue",
+      "name": "Emma Mclean",
+      "gender": "female",
+      "company": "BUZZOPIA",
+      "email": "emmamclean@buzzopia.com",
+      "phone": "+1 (877) 598-3386",
+      "address": "733 Bills Place, Wyoming, Maine, 7883",
+      "about": "Culpa non occaecat eiusmod adipisicing nulla et nisi aliquip cillum anim consequat id duis ipsum. Labore esse occaecat ad do irure aliqua commodo qui quis consectetur laborum cupidatat nulla exercitation. Excepteur commodo eiusmod culpa veniam laborum nulla consectetur tempor. Duis est deserunt amet dolore et sit. Elit aliqua dolor ex Lorem. Ut Lorem ex do excepteur tempor ipsum enim duis in mollit quis eiusmod.\r\n",
+      "registered": "2017-12-30T10:19:31 +03:00",
+      "latitude": 58.622594,
+      "longitude": 109.564135,
+      "tags": [
+        "eiusmod",
+        "non",
+        "ad",
+        "minim",
+        "commodo",
+        "enim",
+        "consequat"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Colleen Campos"
+        },
+        {
+          "id": 1,
+          "name": "Gay Lewis"
+        },
+        {
+          "id": 2,
+          "name": "Erica Lott"
+        }
+      ],
+      "greeting": "Hello, Emma Mclean! You have 7 unread messages.",
+      "favoriteFruit": "apple"
+    },
+    {
+      "_id": "621e8e18dda3ebdeb62a7fd3",
+      "index": 4,
+      "guid": "f2e2623c-5eb0-4af9-8ffa-b1120880a343",
+      "isActive": true,
+      "balance": "$1,658.32",
+      "picture": "http://placehold.it/32x32",
+      "age": 24,
+      "eyeColor": "green",
+      "name": "Deana Mcclain",
+      "gender": "female",
+      "company": "GENMY",
+      "email": "deanamcclain@genmy.com",
+      "phone": "+1 (814) 542-2673",
+      "address": "108 Jamaica Avenue, Bynum, Palau, 7048",
+      "about": "Excepteur eu non cupidatat deserunt do non fugiat eiusmod. Sit cillum aute cupidatat labore veniam. In ipsum deserunt qui Lorem sit adipisicing est ea consectetur dolore exercitation mollit cupidatat commodo. Tempor consequat nostrud reprehenderit commodo incididunt consequat sit est cillum sunt velit quis. Id nulla mollit excepteur fugiat cupidatat tempor id et ipsum labore minim deserunt eu cillum. Id ullamco Lorem sit ut reprehenderit. Anim ullamco pariatur exercitation id duis esse excepteur proident cupidatat esse anim amet proident culpa.\r\n",
+      "registered": "2018-05-02T12:05:38 +03:00",
+      "latitude": -89.510237,
+      "longitude": -129.119456,
+      "tags": [
+        "qui",
+        "id",
+        "nostrud",
+        "minim",
+        "irure",
+        "occaecat",
+        "veniam"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Loraine Velasquez"
+        },
+        {
+          "id": 1,
+          "name": "Clay Dudley"
+        },
+        {
+          "id": 2,
+          "name": "Jan Strickland"
+        }
+      ],
+      "greeting": "Hello, Deana Mcclain! You have 8 unread messages.",
+      "favoriteFruit": "strawberry"
+    },
+    {
+      "_id": "621e8e182b7185a9d3e01a3e",
+      "index": 5,
+      "guid": "abd17b77-1a47-4f31-baaa-48d4f8442da0",
+      "isActive": true,
+      "balance": "$3,550.33",
+      "picture": "http://placehold.it/32x32",
+      "age": 31,
+      "eyeColor": "green",
+      "name": "Beck Kirby",
+      "gender": "male",
+      "company": "EXOVENT",
+      "email": "beckkirby@exovent.com",
+      "phone": "+1 (884) 587-2826",
+      "address": "233 Chester Street, Hinsdale, Michigan, 4897",
+      "about": "Officia nulla adipisicing est nisi enim aute cupidatat dolor enim cupidatat et sint esse. Tempor irure aliqua sunt ut. Magna officia aute aute id consequat enim ad ut sint labore ipsum tempor amet magna. Aute voluptate veniam adipisicing consectetur aute pariatur id eu nulla culpa veniam occaecat eiusmod eiusmod.\r\n",
+      "registered": "2021-02-01T02:01:57 +03:00",
+      "latitude": -64.061009,
+      "longitude": -103.963547,
+      "tags": [
+        "tempor",
+        "consectetur",
+        "adipisicing",
+        "irure",
+        "consequat",
+        "cupidatat",
+        "duis"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Lena Rivas"
+        },
+        {
+          "id": 1,
+          "name": "Murray Simmons"
+        },
+        {
+          "id": 2,
+          "name": "Duke Gardner"
+        }
+      ],
+      "greeting": "Hello, Beck Kirby! You have 3 unread messages.",
+      "favoriteFruit": "banana"
+    }
+  ]
+const parent = document.querySelector('ul')
+const li = document.createElement("li")
+li.className = "list-group-item"
+const img = document.createElement("img", {src: "", alt: "lala"})
+const h2 = document.createElement("h2")
+const newContenth2 = document.createTextNode("Don Draper");
+h2.appendChild(newContenth2)
+const p = document.createElement("p")
+const newContentp = document.createTextNode("Copy writter Advertising");
+p.appendChild(newContentp)
+const p2 = document.createElement("p")
+const newContentp2 =  document.createTextNode("Available");
+p2.appendChild(newContentp2)
+
+const hr = document.createElement("hr")
+li.append(img,h2,p,p2,hr)
+parent.appendChild(li)
+
+</script>    
+</body>
+</html>
