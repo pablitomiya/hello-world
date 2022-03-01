@@ -317,9 +317,10 @@ users.forEach((objUser) => {
   const h2 = document.createElement("h2")
   h2.appendChild(document.createTextNode(objUser.name))
   const p = document.createElement("p")
-  p.appendChild(document.createTextNode(objUser.about))
+  p.appendChild(document.createTextNode(objUser.phone))
   const p2 = document.createElement("p")
-  p2.appendChild(document.createTextNode(objUser.email))
+  const isAvailable = (objUser.isActive) ? 'Available': 'No Available' 
+  p2.appendChild(document.createTextNode(isAvailable))
   const hr = document.createElement("hr")
   li.append(img,h2,p,p2,hr)
   parent.appendChild(li)
