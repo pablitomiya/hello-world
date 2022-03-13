@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        const URL = 'https://jsonplaceholder.typicode.com/posts'
+        function addUserToNode(user){
+            const li =document.createElement('li')
+            const p = document.createElement('p')
+            const h2 = document.createElement('h2')
+
+            h2.appendChild(document.createTextNode(user.name))
+            p.appendChild(document.createTextNode(user.number))
+            //li.appendChild(h2)
+            //li.appendChild(p)
+            li.appendChild(h2,p)
+            return li
+        }
+        // promises
+        // fetch('https://jsonplaceholder.typicode.com/posts')
+        //     .then(resp => resp.json())
+        //     .then(data => {
+        //         //pintar los datos en el html
+        //         console.log('data', data)
+        //     })
+        //     .catch(err => console.log('Error:',err))
+
+        //async/await
+        async function getPost(){
+            //method http get
+            try {
+                const resp = await fetch(URL)
+                const post = await resp.json()
+                console.log('data',post)
+            } catch (error){
+                console.log('Error: ',error)
+            }
+        }
+
+        async function createPost(post) {
+            //method http post
+            try {
+                const options = {
+                    method: 'POST', // GET; POST PUT; DELETE
+                    headers:  {
+                        'Content-type': 'application/json',
+                        // 'Content-type': 'application/x-www-form-urlencoded'
+                    },
+                    body: JSON.stringify(post)
+                }
+                const resp = await fetch(URL, options)
+                const result = await resp.json()
+                console.log('data',result)
+            } catch (error){
+                console.log('Error: ',error)
+            }
+        }
+        getPost()        
+
+        const newBlogPost = {
+            title: "como aprender a programar",
+            body: "es muy simple, solo debes practicar",
+            userId: 1
+        }
+        createPost(newBlogPost)
+    </script>
+</body>
+</html>
