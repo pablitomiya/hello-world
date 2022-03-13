@@ -29,23 +29,28 @@
                 <input type="text" name="number" id="inputNumber">
                 <button id="btnGuardar">Guardar</button>
             </form>
-            <ul class="list-group list-group-horizontal-xxl">
-                <!-- <li class="list-group-item">
-                    <img src="" alt="">
-                    <h2>Don Draper</h2>
-                    <p>Copy writter Advertising</p>
-                    <p>Available</p>
-                    <hr>
-                </li>                -->
+            <ul class="list-group">
             </ul>
         </section>
     </div>
     
 
 <script>
+const URL = 'https://still-plateau-28563.herokuapp.com/api/persons'
+function addUserToNode(user1){
+    const li =document.createElement('li')
+    li.className = "list-group-item"
+    const p = document.createElement('p')
+    const h2 = document.createElement('h2')
 
-    (async () => {
-        const resp = await fetch('https://still-plateau-28563.herokuapp.com/api/persons')
+    h2.appendChild(document.createTextNode(user1.name))
+    p.appendChild(document.createTextNode(user1.number))
+    li.append(h2,p)
+    return li
+}    
+async function getUsers() {
+    try {
+        const resp = await fetch(URL)
         const users = await resp.json()
         const ul = document.querySelector('ul')
         
@@ -55,25 +60,25 @@
             }
             }
         ul.addEventListener('click', listener)
-        
-            
-        
+ 
         const listUsers = users.map(user => {
-            const li =document.createElement('li')
-            li.className = "list-group-item"
-            const p = document.createElement('p')
-            const h2 = document.createElement('h2')
-
-            h2.appendChild(document.createTextNode(user.name))
-            p.appendChild(document.createTextNode(user.number))
-            li.append(h2,p)
-            return li
+            return addUserToNode(user);
         });
         //console.log(listUsers)
         ul.append(...listUsers)
-    })
+    } catch (error){
+                console.log('Error: ',error)
+    }
+}    
+async function addUser(user) {
+    try{
 
-()
+    }
+    catch (error){
+        console.log('Error: ',error)
+    }
+}
+getUsers()
 const $btnOcultar = document.querySelector("#btnOcultar"),
 	$btnMostrar = document.querySelector("#btnMostrar"),
     $formUpdate = document.querySelector("#formUpdate"),
@@ -99,9 +104,10 @@ $btnGuardar.addEventListener("click", () => {
     
     $inputName = document.querySelector("#inputName")
     $inputNumber = document.querySelector("#inputNumber")
+    //user = {`user:`$inputName}
     alert($inputName.value + ' ' + $inputNumber.value)
     event.preventDefault()
-    
+   
 });
 
 
