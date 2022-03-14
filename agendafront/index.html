@@ -70,14 +70,24 @@ async function getUsers() {
                 console.log('Error: ',error)
     }
 }    
-async function addUser(user) {
-    try{
-
-    }
-    catch (error){
-        console.log('Error: ',error)
-    }
-}
+// async function addUser(user) {
+//     try{
+//         const options = {
+//             method: 'POST', // GET; POST PUT; DELETE
+//             headers:  {
+//             'Content-type': 'application/json',
+//             // 'Content-type': 'application/x-www-form-urlencoded'
+//             },
+//             body: JSON.stringify(post)
+//         }
+//         const resp = await fetch(URL, options)
+//         const result = await resp.json()
+//         console.log('data',result)
+//     }
+//     catch (error){
+//         console.log('Error: ',error)
+//     }
+// }
 getUsers()
 const $btnOcultar = document.querySelector("#btnOcultar"),
 	$btnMostrar = document.querySelector("#btnMostrar"),
@@ -104,10 +114,16 @@ $btnGuardar.addEventListener("click", () => {
     
     $inputName = document.querySelector("#inputName")
     $inputNumber = document.querySelector("#inputNumber")
-    //user = {`user:`$inputName}
     alert($inputName.value + ' ' + $inputNumber.value)
     event.preventDefault()
-   
+    const newPerson = {
+        "name": $inputName,
+        "number": $inputNumber
+    }
+    const liPerson = addUserToNode(newPerson)
+    console.log(liPerson)
+    const ul = document.querySelector('ul')
+    ul.append(...liPerson)
 });
 
 
